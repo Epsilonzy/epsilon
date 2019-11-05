@@ -1,0 +1,10 @@
+.bottom {
+    position: relative;
+    width: 100%;
+    background-color: #202020;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    line-height: 2em;
+    ;
+}

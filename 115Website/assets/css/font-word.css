@@ -1,0 +1,30 @@
+.wordAbout {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.wordContent {
+    font-size: 1em;
+    font-family: Montserrat, sans-serif;
+    color: #667;
+}
+
+.wordDetails {
+    font-size: 1.25em;
+    color: #666;
+}
+
+.wordLittleEng {
+    font-size: .75em;
+    color: #666;
+}
+
+.wordTitle {
+    font-size: 1.75em;
+    font-weight: 800;
+}
+
+.wordBottom {
+    font-size: .9em;
+    color: #7c7c7d;
+}

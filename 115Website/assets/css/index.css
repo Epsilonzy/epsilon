@@ -1,0 +1,190 @@
+/*主页背景图片*/
+
+.bannerImg {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+    z-index: 1;
+}
+
+.bannerImg>img {
+    width: 100%;
+}
+
+
+/*主页内容*/
+
+
+/*关于我们*/
+
+.introduction {
+    margin-top: 3em;
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.introduction>div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+.aboutTitle {
+    text-align: center;
+    width: 100%;
+    height: 5em;
+    line-height: 2em;
+}
+
+
+/*中心的介绍*/
+
+.content {
+    width: 100%;
+    line-height: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+/*中心的成果*/
+
+.introDetails {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    padding: 1px;
+    overflow: hidden;
+}
+
+.introDetails>div {
+    background-color: #f8f8f8;
+    line-height: 2em;
+    width: 20em;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+.detailsL {
+    float: left;
+}
+
+.detailsR {
+    float: left;
+}
+
+.introDetails>div>p {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+/*中心的方向*/
+
+.direction {
+    margin-top: 5em;
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+}
+
+.career {
+    float: left;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2em;
+    text-align: center;
+    line-height: 2em;
+    background-color: #f8f8f8;
+    border-radius: 1em;
+    box-shadow: 0 0 5px black;
+}
+
+.career>hr {
+    width: 3em;
+}
+
+.career:hover>hr {
+    width: 6em;
+    color: #00a1e9;
+    transition: .5s linear;
+}
+
+.career:hover>.wordTitle {
+    transition: .5s linear;
+    color: #00a1e9;
+}
+
+.directionImg {
+    background-color: #666;
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.directionContent {
+    margin: 0 2em;
+}
+
+
+/*反馈中心*/
+
+.contact {
+    margin-top: 4em;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.contact>input {
+    display: block;
+    float: right;
+    margin-right: 20%;
+    background: linear-gradient(90deg, #05d5ee, #0081e5);
+    line-height: 3em;
+    font-size: 1.25em;
+    font-weight: 700;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 2em;
+    margin-top: 1em;
+    color: white;
+}
+
+.contact>input:hover {
+    background: linear-gradient(90deg, #0081e5, #05d5ee);
+    transition: .25s linear;
+    box-shadow: 0px 0px 8px black;
+}
+
+.contactL {
+    float: left;
+    margin-left: 10%;
+}
+
+.contactL>a:hover {
+    color: blue;
+    transition: .5s linear;
+}
+
+.contactL>p {
+    line-height: 2em;
+}
