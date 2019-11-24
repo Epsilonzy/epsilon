@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #223a4d;
+        }
+        
+        .box {
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: #223a4d;
+            border: 1.5px solid #979797;
+        }
+        
+        .box:active>.boxHidden {
+            background-color: #00ccce;
+            width: 100%;
+            height: 100%;
+            transition: .6s linear;
+            transform: translate(-10px, -10px);
+        }
+        
+        .box:active>.boxHidden>p {
+            color: #fff;
+            transition: .6s linear;
+        }
+        
+        .boxHidden>p {
+            float: right;
+            font-size: 18px;
+            color: #00ccce;
+            margin-top: 5px;
+            margin-right: 5px;
+            letter-spacing: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="boxHidden">
+            <p>我们</p>
+        </div>
+    </div>
+</body>
+
+</html>

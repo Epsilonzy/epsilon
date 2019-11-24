@@ -5,8 +5,18 @@
 
 .wordContent {
     font-size: 1em;
-    font-family: Montserrat, sans-serif;
-    color: #667;
+    color: #717171;
+}
+
+.wordContentMB {
+    font-size: 1.4em;
+    color: #3E3e3e;
+    word-break: break-all;
+}
+
+.wordContentM {
+    font-size: 1.25em;
+    color: #717171;
 }
 
 .wordDetails {
@@ -22,6 +32,11 @@
 .wordTitle {
     font-size: 1.75em;
     font-weight: 800;
+}
+
+.wordBottomM {
+    font-size: 1.1em;
+    color: white;
 }
 
 .wordBottom {

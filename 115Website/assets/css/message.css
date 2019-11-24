@@ -1,0 +1,114 @@
+    .container {
+        position: relative;
+        width: 100%;
+        background-color: #f7f6f6;
+        padding-top: 5em;
+        padding-bottom: .5em;
+    }
+    
+    .container>.messageBlock {
+        width: 80%;
+        padding-bottom: .5em;
+        background-color: #f7f6f6;
+        margin-left: 10%;
+        overflow: hidden;
+    }
+    /* 这是每个信息留言板的内容 */
+    
+    .messageBox {
+        width: 13em;
+        background-color: #fff;
+        box-shadow: 0px 0px 2px #aaa;
+        line-height: 1.75em;
+        padding: 1em;
+        border-radius: .5em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(odd) {
+        float: left;
+    }
+    
+    .messageBlock>.messageBox:nth-child(even) {
+        float: right;
+    }
+    /* .messageBlock>.messageBox:nth-child(1) {
+        float: left;
+        margin-top: 4em;
+        margin-left: 2em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(2) {
+        float: right;
+        margin-top: 2em;
+        margin-right: 5em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(3) {
+        float: left;
+        margin-top: 12em;
+        margin-left: 6em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(4) {
+        float: right;
+        margin-top: 10em;
+        margin-right: 3em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(5) {
+        float: left;
+        margin-top: 6em;
+        margin-left: 6em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(6) {
+        float: right;
+        margin-top: 3em;
+        margin-right: 1em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(7) {
+        float: right;
+        margin-top: 2em;
+        margin-right: 4em;
+    }
+    
+    .messageBlock>.messageBox:nth-child(8) {
+        float: left;
+        margin-top: 3em;
+        margin-left: 5em;
+    } */
+    /*输入框块*/
+    
+    .messageInput {
+        width: 100%;
+        margin-top: 2em;
+        background-color: #f7f6f6;
+        text-align: center;
+    }
+    
+    .inputBox {
+        width: 16em;
+        background-color: #fff;
+        height: 4em;
+        border-radius: 2em;
+        margin: 1em auto;
+        box-shadow: 0px 0px 3px #aaa;
+    }
+    /* .inputBox:hover>i {
+        color: #00a1e9;
+        transition: .5s linear;
+    } */
+    
+    .inputBox>i {
+        font-size: 2em;
+        float: right;
+        margin-right: 1em;
+        margin-top: .5em;
+    }
+    
+    .inputBox>input {
+        width: 10em;
+        margin-top: .5em;
+        height: 3em;
+    }

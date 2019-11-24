@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <style>
+        .bannerImg {
+            width: 100%;
+            position: relative;
+        }
+        
+        .bannerImg>img {
+            width: 100%;
+            filter: blur(0px);
+            animation: ful1 .5s infinite;
+        }
+        
+        @keyframes ful1 {
+            0% {
+                filter: blur(0px);
+            }
+            25% {
+                filter: blur(1.5px);
+            }
+            50% {
+                filter: blur(3px);
+            }
+            75% {
+                filter: blur(1.5px);
+            }
+            100% {
+                filter: blur(0px);
+            }
+        }
+        
+        .drag {
+            position: absolute;
+            top: 20em;
+            left: 50%;
+            top: 50%;
+            width: 3em;
+            height: 3em;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bannerImg">
+        <img src='assets/img/tjut.jpeg'>
+        <div class="drag">like this window</div>
+    </div>
+    <script>
+        var name = "牛梓雨";
+        var foo = (function myFoo(name) {
+            function doSomething() {
+                console.log(name);
+            }
+
+            function doSomething2() {
+                console.log(name + "2");
+            }
+
+            function changeSomething() {
+                publicAPI.doSomething = doSomething2;
+            }
+            var publicAPI = {
+                doSomething: doSomething,
+                changeSomething: changeSomething
+            }
+            return publicAPI;
+        })("牛梓雨");
+        foo.doSomething();
+        foo.changeSomething();
+        foo.doSomething();
+    </script>
+</body>
+
+</html>
