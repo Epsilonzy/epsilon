@@ -1,0 +1,141 @@
+body {
+    background-color: #f7f6f6;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin-left: 5%;
+    overflow: hidden;
+    margin-top: 5em;
+}
+
+.directionBox {
+    overflow: hidden;
+    float: left;
+    margin-top: 2em;
+    margin-left: 4.5em;
+    padding: .5em;
+    box-shadow: 0px 2px 7px rgba(196, 196, 196, 0.50);
+}
+
+.directionBox>div {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.boxLeft {
+    float: left;
+    text-align: center;
+}
+
+.boxLeft>p {
+    font-size: 1.5em;
+    margin-top: .5em;
+}
+
+.svg {
+    margin: 0 auto;
+    width: 6em;
+    height: 6em;
+    border-radius: 4em;
+    padding-top: 1px;
+}
+
+.svg>img {
+    display: block;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4em;
+    height: 4em;
+}
+
+.middleLine {
+    float: left;
+    width: 2px;
+    height: 11em;
+    margin-left: 2em;
+}
+
+.boxRight {
+    float: right;
+    width: 14em;
+    text-align: center;
+    margin-left: 2em;
+}
+
+.boxRight>p {
+    font-size: 1.25em;
+}
+
+.boxRight>p:nth-child(2) {
+    margin-top: 2em;
+}
+
+.directionBox:nth-child(odd) {
+    background-color: #fff;
+}
+
+.directionBox:nth-child(odd) .svg {
+    background-color: #d8d8d8;
+}
+
+.directionBox:nth-child(odd) .middleLine {
+    background-color: #d8d8d8;
+}
+
+.directionBox:nth-child(odd):hover {
+    background-color: #4dc9cc;
+    transition: .5s linear;
+}
+
+.directionBox:nth-child(even) {
+    background-color: #223a4d;
+}
+
+.directionBox:nth-child(even):hover {
+    background-color: #4dc9cc;
+    transition: .5s linear;
+}
+
+.directionBox:nth-child(even) .svg {
+    background-color: #fff;
+}
+
+.directionBox:nth-child(even) p {
+    color: #fff;
+}
+
+.directionBox:nth-child(even) .middleLine {
+    background-color: #fff;
+}
+
+.recruitFile {
+    clear: left;
+    padding-top: 4em;
+    margin-bottom: 2em;
+}
+
+.hr {
+    width: 80%;
+    color: #d8d8d8;
+    margin-bottom: 3em;
+}
+
+.recruitFileBox {
+    margin-top: 20px;
+    padding: 2em;
+    width: 90%;
+    margin: 0px auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 7px #aaa;
+}
+
+.recruitFileBox>p {
+    line-height: 2em;
+}

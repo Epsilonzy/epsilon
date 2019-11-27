@@ -1,7 +1,7 @@
 function message() {
     var obj = [{
         "name": "牛梓雨",
-        "content": "我是前端狗"
+        "content": "我是前端狗的同时我也是狗比"
     }, {
         "name": "邓佳骏",
         "content": "我是前端狗"
@@ -36,7 +36,17 @@ function message() {
         "name": "小狗狗",
         "content": "汪汪汪"
     }]
+    document.getElementsByClassName("inputBox")[0].addEventListener("click", inputBox);
+    document.getElementsByClassName("fa-times")[0].addEventListener("click", inputBox);
 
+    function inputBox() {
+        var box = document.getElementsByClassName("inputBoxHid")[0];
+        if (box.style.display == "none") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
 
     function setStyle(obj, mTop, mRight, mBottom, mLeft) {
         obj.style.marginTop = mTop + "em";

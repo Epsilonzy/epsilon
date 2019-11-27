@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://www.softwhy.com/" />
+    <title>web前端开发资源Q-q-u-n： 767273102 ，希望新手少走弯路 </title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        #main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        
+        #img {
+            width: 100px;
+            height: 120px;
+            background: #faa;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var main = document.getElementById("main");
+            sy = 0;
+            speedy = 2;
+            sx = 0;
+            speedx = 2;
+            imgh = 120;
+            imgw = 100;
+            winh = document.documentElement.clientHeight;
+            winw = document.documentElement.clientWidth;
+
+            function start() {
+                sobj = setInterval(function() {
+                    sy += speedy;
+                    sx += speedx;
+                    //y轴运动
+                    if (sy <= 0) {
+                        speedy = -speedy;
+                    }
+                    if (sy >= winh - imgh) {
+                        speedy = -speedy;
+                        sy = winh - imgh;
+                    }
+                    //x轴运动
+                    if (sx <= 0) {
+                        speedx = -speedx;
+                    }
+                    if (sx >= winw - imgw) {
+                        speedx = -speedx;
+                        sx = winw - imgw;
+                    }
+                    main.style.top = sy + 'px';
+                    main.style.left = sx + 'px';
+                }, 100)
+            }
+            start();
+            main.onmouseover = function() {
+                clearInterval(sobj);
+            }
+            main.onmouseout = function() {
+                start();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="img">
+        </div>
+    </div>
+</body>
+
+</html>

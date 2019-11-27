@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <style>
+        .button {
+            float: left;
+            margin: 5em 0 0 5em;
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+            border-radius: 5em;
+            z-index: 1;
+        }
+        
+        .boxLeftNo {
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            z-index: 999;
+            left: -100px;
+            background-color: blue;
+        }
+        /* .boxLeftBack{
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            z-index: 999;
+            left: -100px;
+            background-color: blue;
+        } */
+        
+        .boxLeftActive {
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            z-index: 999;
+            background-color: blue;
+            animation: chulai .3s ease;
+        }
+        
+        @keyframes chulai {
+            0% {
+                left: -100px;
+            }
+            25% {
+                left: -75px;
+            }
+            50% {
+                left: -50px;
+            }
+            75% {
+                left: -25px;
+            }
+            100% {
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button">
+
+    </div>
+    <div class="boxLeftNo" id="boxLeft"></div>
+    <script>
+        window.onload = function() {
+            document.getElementsByClassName("button")[0].addEventListener("click", () => {
+                var bL = document.getElementById("boxLeft");
+                if (bL.className == "boxLeftNo") {
+                    bL.className = "boxLeftActive";
+                } else {
+                    bL.className = "boxLeftNo";
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
