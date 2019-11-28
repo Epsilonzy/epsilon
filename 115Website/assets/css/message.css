@@ -18,11 +18,23 @@
     .messageBox {
         width: 13em;
         background-color: #fff;
-        box-shadow: 0px 0px 2px #aaa;
+        box-shadow: 0px 2px 5px #aaa;
         line-height: 1.75em;
         padding: 1em;
         border-radius: .5em;
-        animation: anmTest 20s infinite;
+    }
+    /* 暂停动画效果 */
+    /* .messageBox:nth-child(n):hover {
+        animation: anmStop 0s;
+    } */
+    
+    @keyframes anmStop {
+        0% {
+            background: #000000;
+        }
+        100% {
+            background: #FFFFFF;
+        }
     }
     
     .messageBlock>.messageBox:nth-child(odd) {
@@ -129,7 +141,7 @@
     }
     
     .inputBox {
-        width: 10em;
+        width: 4em;
         background-color: #fff;
         height: 4em;
         border-radius: 2em;
@@ -138,7 +150,6 @@
     }
     
     .inputBox:hover {
-        width: 16em;
         transition: .5s linear;
         cursor: pointer;
     }
@@ -150,9 +161,7 @@
     
     .inputBox>i {
         font-size: 2em;
-        float: right;
-        margin-right: 1em;
-        margin-top: .5em;
+        margin: .5em auto;
     }
     
     .inputBox>input {
@@ -387,10 +396,15 @@
         margin-top: 1em;
         height: 3em;
         border-radius: 2em;
-        background: linear-gradient(70deg, blue, white);
+        background: linear-gradient(45deg, #386eb4, #aaa);
         color: white;
         letter-spacing: .5em;
         font-size: 1em;
+    }
+    
+    #submitBtn:hover {
+        box-shadow: 0px 2px 7px #aaa;
+        transition: .3s linear;
     }
     
     .submitBtn:hover {

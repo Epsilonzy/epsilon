@@ -36,6 +36,19 @@ function message() {
         "name": "小狗狗",
         "content": "汪汪汪"
     }]
+    $.ajax({
+        type: 'get',
+        dataType: "json",
+        processData: false,
+        url: "http://192.168.115.77:8080/messageboard/api/message/get",
+
+        success: function(result) {
+            createBoxRandom(result.result);
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            alert("请求失败");
+        }
+    });
     document.getElementsByClassName("inputBox")[0].addEventListener("click", inputBox);
     document.getElementsByClassName("fa-times")[0].addEventListener("click", inputBox);
 
@@ -72,8 +85,11 @@ function message() {
     }
 
     function createBoxRandom(message) {
-        const length = 15;
-        for (let i = 0; i < message.length; i++) {
+        const length = 10;
+        if (message.length < length) {
+            length = message.length;
+        }
+        for (let i = 0; i < length; i++) {
             var mT = Math.floor(Math.random() + 2);
             var mR = Math.floor(Math.random() * 10 + 5);
             var mL = Math.floor(Math.random() * 10 + 5);
@@ -84,8 +100,33 @@ function message() {
                 mL = 0;
                 mT--;
             }
-            createMessageBox(message[i].name, message[i].content, mT, mR, 0, mL);
+            createMessageBox(message[i].send_id, message[i].message, mT, mR, 0, mL);
         }
     }
-    createBoxRandom(obj);
+    // createBoxRandom(obj);
+    $('#ajaxBtn').click(function() {
+        var dataObj = {
+            name: document.getElementById("name").value,
+            content: document.getElementById('content').value
+        }
+        if (dataObj.name == "" && dataObj.content == "") {
+            alert("内容不能为空!");
+        }
+        $.ajax({
+            type: 'get',
+            dataType: "jsonp",
+            processData: false,
+            url: "http://192.168.115.77:8080/messageboard/api/message/add",
+            data: dataObj,
+
+            success: function(result) {
+                alert("提交成功");
+                document.getElementsByClassName("inputBoxHid")[0].style.display = "none";
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("提交失败");
+                document.getElementsByClassName("inputBoxHid")[0].style.display = "none";
+            }
+        });
+    });
 }
